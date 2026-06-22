@@ -4,7 +4,7 @@
 # Every 30 seconds it generates a new dummy JSON data file
 # and saves it to the EBS volume.
 #
-# image: 366554472163.dkr.ecr.ap-northeast-3.amazonaws.com/kaniko-scraper:65
+# image: 366554472163.dkr.ecr.ap-northeast-3.amazonaws.com/kaniko-scraper:66
 # What it does: writes fresh dummy data every 30 seconds
 #               serves the latest data via HTTP on port 9090
 # ============================================================
@@ -32,7 +32,7 @@ spec:
       serviceAccountName: scraper-sa
       containers:
         - name: scraper
-          image: 366554472163.dkr.ecr.ap-northeast-3.amazonaws.com/kaniko-scraper:65
+          image: 366554472163.dkr.ecr.ap-northeast-3.amazonaws.com/kaniko-scraper:66
           command:
             - sh
             - -c
