@@ -19,4 +19,4 @@ spec:
       protocol: TCP
       port: 80                # service port (what other pods call)
       targetPort: 8080        # container port (what nginx listens on)
-  type: ClusterIP
+  type: LoadBalancer
