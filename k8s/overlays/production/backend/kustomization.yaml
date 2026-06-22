@@ -6,7 +6,7 @@ resources:
   - rbac.yaml
   - configmap.yaml
   - secret.yaml
-  - pvc.yaml
+  #- pvc.yaml
   - deployment.yaml
   - service.yaml
   - networkpolicy.yaml
