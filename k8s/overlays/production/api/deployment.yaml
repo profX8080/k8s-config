@@ -8,6 +8,10 @@
 # What it does: returns a JSON response on any HTTP request
 # Test it: curl http://api-svc:8080
 # ============================================================
+# ============================================================
+# DEPLOYMENT — api
+# image: 366554472163.dkr.ecr.ap-northeast-3.amazonaws.com/kaniko-api:59
+# ============================================================
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -33,16 +37,9 @@ spec:
         tier: backend
     spec:
       serviceAccountName: api-sa
-      securityContext:
-        runAsNonRoot: true
-        runAsUser: 1000
       containers:
         - name: api
-          image: hashicorp/http-echo:latest
-          args:
-            # This is the JSON the API returns for every request
-            - "-text={\"status\":\"ok\",\"service\":\"api\",\"data\":[{\"id\":1,\"name\":\"Item One\"},{\"id\":2,\"name\":\"Item Two\"},{\"id\":3,\"name\":\"Item Three\"}]}"
-            - "-listen=:8080"
+          image: 366554472163.dkr.ecr.ap-northeast-3.amazonaws.com/kaniko-api:59
           ports:
             - containerPort: 8080
               name: http
@@ -73,4 +70,4 @@ spec:
               path: /
               port: 8080
             initialDelaySeconds: 10
-            periodSeconds: 20
+            periodSeconds: 20 
