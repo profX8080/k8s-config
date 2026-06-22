@@ -12,4 +12,4 @@ resources:
   - 02-limitrange.yaml
   - 03-storageclass.yaml
   - 04-networkpolicy.yaml
-  - 05-karpenter.yaml
+  # - 05-karpenter.yaml
