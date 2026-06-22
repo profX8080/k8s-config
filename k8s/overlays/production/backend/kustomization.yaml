@@ -10,7 +10,7 @@ resources:
   - deployment.yaml
   - service.yaml
   - networkpolicy.yaml
-  - hpa-pdb.yaml
+  #- hpa-pdb.yaml
 
 images:
   - name: busybox
