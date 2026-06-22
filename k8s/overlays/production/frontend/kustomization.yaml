@@ -13,7 +13,7 @@ resources:
   - secret.yaml
   - deployment.yaml
   - service.yaml
-  - ingress.yaml
+  #- ingress.yaml
   - networkpolicy.yaml
   - hpa-pdb.yaml
 
