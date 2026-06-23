@@ -4,13 +4,13 @@
 # Uses hashicorp/http-echo — a tiny Go server that returns
 # a custom message as JSON. Perfect for lab testing.
 #
-# image: 366554472163.dkr.ecr.ap-northeast-3.amazonaws.com/kaniko-api:69
+# image: 366554472163.dkr.ecr.ap-northeast-3.amazonaws.com/kaniko-api:72
 # What it does: returns a JSON response on any HTTP request
 # Test it: curl http://api-svc:8080
 # ============================================================
 # ============================================================
 # DEPLOYMENT — api
-# image: 366554472163.dkr.ecr.ap-northeast-3.amazonaws.com/kaniko-api:69
+# image: 366554472163.dkr.ecr.ap-northeast-3.amazonaws.com/kaniko-api:72
 # ============================================================
 apiVersion: apps/v1
 kind: Deployment
@@ -39,7 +39,7 @@ spec:
       serviceAccountName: api-sa
       containers:
         - name: api
-          image: 366554472163.dkr.ecr.ap-northeast-3.amazonaws.com/kaniko-api:69
+          image: 366554472163.dkr.ecr.ap-northeast-3.amazonaws.com/kaniko-api:72
           ports:
             - containerPort: 8080
               name: http
